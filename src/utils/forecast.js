@@ -15,7 +15,7 @@ const forecast = (lat, long, callback) => {
       let current = body.current
       let weather_desc = current.weather_descriptions.map(desc => `and ${desc.toLowerCase()}`)
       console.log(weather_desc.join())
-      callback(undefined, `It is currently ${current.temperature} degrees out ${weather_desc.join()}. It feels like ${current.feelslike} degrees out. The humidity level is ${current.humidity}% and there is a ${current.precip}% chance of rain`)
+      callback(undefined, `It is currently ${current.temperature} degrees out ${weather_desc.join()}. It feels like ${current.feelslike} degrees out. The humidity level is ${current.humidity}% and there is a ${current.precip}% chance of rain.`)
     }
   })
 }
